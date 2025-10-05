@@ -34,7 +34,7 @@ def login():
     time.sleep(2)
     driver.find_element(by="id", value="id_password").send_keys(
         "automatedautomated" + Keys.RETURN)
-    input("Watching… press Enter to close the browser.")
+
     time.sleep(2)
     print(driver.current_url)
     driver.find_element(by="xpath", value="/html/body/nav/div/a").click()
