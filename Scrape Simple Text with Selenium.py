@@ -21,14 +21,10 @@ def get_driver():
 
 def main():
     driver = get_driver()
-    try:
-        element = driver.find_element(By.XPATH, "/html/body/div[1]/div/h1[1]")
-        input("Watching… press Enter to close the browser.")
-        return element.text
-
-    finally:
-        driver.quit()
+    element = driver.find_element(
+        by="xpath", value="/html/body/div[1]/div/h1[1]")
+    return element.text
 
 
-if __name__ == "__main__":
-    print(main())
+print(main()
+      )
