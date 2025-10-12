@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta
+import time
 import pandas as pd
 import pandas_datareader.data as web
 
@@ -29,3 +30,16 @@ print(df.head(), "\n...\n", df.tail())
 # df  = df[(df["Date"] >= start) & (df["Date"] <= end)]
 
 # df.to_csv(f"{symbol}_stooq_{start:%Y%m%d}-{end:%Y%m%d}.csv", index=False)
+"""date time convertion code"""
+# from datetime import datetime, timedelta
+# import time
+# ticher = input("Enter the ticker symbol: ")
+# from_date = input("Enter start date in yyyy/mm/dd format: ")
+# to_date = input("Enter end date in yyyy/mm/dd format: ")
+
+# from_date = datetime.strptime(from_date, "%Y/%m/%d")
+# to_date = datetime.strptime(to_date, "%Y/%m/%d")
+
+# from_epoch = int(time.mktime(from_date.timetuple()))
+# to_epoch = int(time.mktime(to_date.timetuple()))
+"""with this code above be sure to use an F string with '' and {} to make sure the epoch time is inserted correctly"""
